@@ -1,5 +1,5 @@
 import unittest
-from test import MyCalculator
+from calculator import MyCalculator
 
 
 class TestAddNumbers(unittest.TestCase):
@@ -43,3 +43,6 @@ class TestAddNumbers(unittest.TestCase):
 
     def test_ignore_numbers_greaterthan_1000(self):
         self.assertEqual(self.calculator.add("1000 ,2000"), 1000)
+
+    def test_occurence_more_than_three(self):
+        self.assertEqual(self.calculator.add("1, 2, 2,  3, 3, 3, 4,5"),  41) #21
